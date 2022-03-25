@@ -6,16 +6,21 @@ $(document).ready(function() {
     const sideC = parseInt($("input#sideC").val());
 
 
+
+
+
     if (sideA + sideB <= sideC || sideB + sideC <= sideA || sideC + sideA <= sideB) {
-      alert("That ain't a triangle!");  
-  } else if (sideA === sideB && sideB === sideC) {
+      alert("That ain't no triangle!");  
+  }
+  else if (sideA === sideB && sideB === sideC) {
       alert("That's an EQUILATERAL TRIANGLE");
   } else if (sideA === sideB || sideC === sideB || sideC ===sideA) {
       alert("That's an Isosceles");
-  } else if (sideA != sideB && sideB != sideC)  {
+  } else if (sideA !== sideB && sideB !== sideC)  {
+      console.log();
       alert("That's an SCALENE");
-  } else {
-      alert("Where'd you get that triangle???");
-  }  
+  }  else if (sideA === a-z || sideB === [0-9] || sideC != [0-9]) {
+     alert("Error: Please Enter Numbers Only");
+  } 
   });
 });
